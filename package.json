@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "employee-tracker": "^1.0.3",
+    "inquirer": "^8.2.0"
+  }
+}
