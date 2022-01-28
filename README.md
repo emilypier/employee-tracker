@@ -2,7 +2,7 @@
 ![MIT license](https://img.shields.io/badge/license-MIT-yellow)
 
 ## Description 
-A website/application that offers/uses
+A content management systems (CMS) command-line application that offers/uses
 
 ## Table of Contents 
 

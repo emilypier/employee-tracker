@@ -1,6 +1,7 @@
-DROP DATABASE IF EXISTS employees_db;
-CREATE DATABASE employees_db;
-USE employees_db;
+-- deletes tables every time you run schema.sql file, ensuring you start w a clean slate
+DROP TABLE IF EXISTS department;
+DROP TABLE IF EXISTS role; 
+DROP TABLE IF EXISTS employee;
 
 CREATE TABLE department (
   id INTEGER AUTO_INCREMENT PRIMARY KEY,
@@ -12,9 +13,7 @@ CREATE TABLE role (
   title VARCHAR(30) NOT NULL,
   salary DECIMAL,
   department_id INTEGER,
-  FOREIGN KEY(department_id)
-  REFERENCES department(id)
-  ON DELETE SET NULL
+  FOREIGN KEY(department_id) REFERENCES department(id) ON DELETE CASCADE
 );
 
 CREATE TABLE employee (
@@ -22,7 +21,7 @@ CREATE TABLE employee (
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   role_id INTEGER,
-  FOREIGN KEY(role_id)
-  REFERENCES role(id)
-  ON DELETE SET NULL
+  FOREIGN KEY(role_id) REFERENCES role(id) ON DELETE CASCADE,
+  manager_id INT, 
+  FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
 );
