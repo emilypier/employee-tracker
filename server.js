@@ -53,6 +53,7 @@ function loadQuestions(){
         break;
       case 'add an employee':
         //prompted to enter the employee’s first name, last name, role, & manager, & that employee is added to database
+        addEmployee();
         break;
       case 'update an employee role':
         //prompted to select an employee to update and their new role and this info is updated in database
@@ -84,13 +85,7 @@ function viewAllEmployees(){
 };
 
 function addDepartment(){
-  db.findAllDepartments().then(([depts])=>{
-    
-    let dept = depts.map(({id, name})=>({
-      name: name,
-      value: id
-    }))
-  
+  db.findAllDepartments().then(()=>{
   inquirer.prompt([
     {
       type: 'input',
@@ -137,8 +132,42 @@ function addRole(){
   })
 };
 
-function updateRole(){
+// function updateRole(){
 
+// };
+
+
+function addEmployee(){
+  db.findAllRoles().then(([roles])=>{
+
+    let roleChoices = roles.map(({id, title})=>({
+      name: title,
+      value: id
+    }))
+
+    inquirer.prompt([
+      {
+        type: 'input',
+        name: 'first_name',
+        message: "What is the employee's first name?"
+      }, 
+      {
+        type:'input',
+        name: 'last_name',
+        message: "What is the employee's last name?"
+      }, 
+      {
+        type: 'list',
+        name: 'role_id',
+        message: "What is the employee's role?",
+        choices: roleChoices
+      },
+    ]).then((answers)=>{
+      db.createNewEmployee(answers)
+      .then(()=> loadQuestions());
+    })
+  })
 };
+
 
   start();

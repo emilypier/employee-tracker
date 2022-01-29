@@ -32,9 +32,9 @@ class DB {
   //   return this.connection.promise().query('')
   // }
 
-  // createNewEmployee(role){
-  //   return this.connection.promise().query('INSERT INTO role SET ?', role)
-  // }
+  createNewEmployee(employee){
+    return this.connection.promise().query('INSERT INTO employee SET ?', employee)
+  }
 
 }
 
