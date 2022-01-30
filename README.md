@@ -17,7 +17,7 @@ A content management systems (CMS) command-line application that offers/uses
 * [Questions](#questions)
 
 ## Installation
-Clone this GitHub repository and install Node.js, Inquirer, console.table and mysql2.
+Clone this GitHub repository. In the command line, install Node.js by running the command `npm install`.
 
 ## Usage
 Run command `npm start` to start this application
@@ -30,8 +30,10 @@ This application is covered under MIT license.
 
 ## Built With
 * JavaScript
+* MYSQL2
 * Node.js
-* SQL
+* Inquirer
+* Console.table
 
 ## Questions
 Made by Emily Pierson.

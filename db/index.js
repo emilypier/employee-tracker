@@ -28,14 +28,13 @@ class DB {
     return this.connection.promise().query('INSERT INTO role SET ?', role)
   }
 
-  // createUpdatedRole(){
-  //   return this.connection.promise().query('')
-  // }
-
   createNewEmployee(employee){
     return this.connection.promise().query('INSERT INTO employee SET ?', employee)
   }
 
+  // createUpdatedRole([employee]){
+  //   return this.connection.promise().query('UPDATE role SET title = ? WHERE id = ?', [role, employee]) 
+  // }
 }
 
 module.exports= new DB(connection)
