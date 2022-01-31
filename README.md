@@ -24,6 +24,7 @@ Run command `npm start` to start this application
 
 ![Image of Employee Tracker app.](/docs/assets/note-taker-image.png)
 
+Watch the walkthrough video [here](https://drive.google.com/file/d/1_Z_0gtsXmYzOanRAqg6Qwn1okSb12iaR/view?usp=sharing).
 
 ## License
 This application is covered under MIT license.
