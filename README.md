@@ -22,7 +22,7 @@ Clone this GitHub repository. In the command line, install Node.js by running th
 ## Usage
 Run command `npm start` to start this application
 
-![Image of Employee Tracker app.](/docs/assets/note-taker-image.png)
+![Image of Employee Tracker app.](/assets/employee-tracker.png)
 
 Watch the walkthrough video [here](https://drive.google.com/file/d/1_Z_0gtsXmYzOanRAqg6Qwn1okSb12iaR/view?usp=sharing).
 
